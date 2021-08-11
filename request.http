@@ -1,0 +1,71 @@
+### SIGNUP
+
+POST http://localhost:8000/api/v1/users/signup
+Content-Type: application/json
+
+{
+   "username":"",
+   "email":"",
+   "password":"",
+   "passwordConfirm":""
+}
+
+
+### SIGNIN
+
+POST http://localhost:8000/api/v1/users/signin
+Content-Type: application/json
+
+{
+    "email":"",
+    "password":""
+}
+
+### CREATE PRODUCTS <Operator>
+
+POST http://localhost:8000/api/v1/products/<category-id>
+Content-Type: application/json
+
+{
+    "title":"",
+    "price":4,
+    "quantity":3
+}
+
+
+### CREATE COMMENT ON A PRODUCT
+
+POST http://localhost:8000/api/v1/products/<product-id>/comments
+Content-Type: application/json
+
+{
+    "content":"",
+    "ratings":4
+}
+
+### CREATE PRODUCT's CATEGORY
+
+POST http://localhost:8000/api/v1/categories
+Content-Type: application/json
+
+{
+    "name":""
+}
+
+
+
+
+### GET ALL PRODUCTS
+
+GET GET http://localhost:8000/api/v1/products/
+
+
+### GET ALL CATEGORIES
+GET http://localhost:8000/api/v1/categories
+
+
+### ADD PRODUCT TO CART
+GET http://localhost:8000/api/v1/products/<product-id>/add-to-cart
+
+### SUBMIT ORDERS
+GET http://localhost:8000/api/v1/orders/submit
